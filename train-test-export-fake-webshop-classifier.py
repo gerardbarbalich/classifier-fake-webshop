@@ -1,5 +1,5 @@
 """
-This script is produces a classsifier of fake webshops. 
+This script produces a classsifier of fake webshops. 
 To do this, it injests processed data, trains and tests a classifer, and outputs the pickled classifier. 
 
 In more detail - it imports data from WebScan, combines it, and performs analysis to identify fake webshops. The expected
@@ -34,21 +34,21 @@ from typing import Dict, List, Any
 
 # Initialize an empty dictionary to store data
 data: Dict[str, Any] = {
-    'SEL_DATE': '2018-12-14', # Selected data
     'DATA_DIR': str,
-    'SPLIT_TEST_SIZE': 0.5,
+    'SEL_DATE': '2018-12-14', # Selected data
     'SPLIT_SEED': 2,
-    'data_files': str,
-    'dfs': list,
+    'SPLIT_TEST_SIZE': 0.5,
+    'clf': RandomForestClassifier,
     'd': pd.DataFrame,
+    'data_files': str,
+    'df': pd.DataFrame,
     'df_fake_domains': pd.DataFrame,
-    'ls_fake_domains': list,
+    'dfs': list,
     'ls_custom_stop': list,
     'ls_custom_stop_set': list,
-    'df': pd.DataFrame,
+    'ls_fake_domains': list,
     'tokenizer': RegexpTokenizer,
-    'vec_tfidf': TfidfVectorizer,
-    'clf': RandomForestClassifier
+    'vec_tfidf': TfidfVectorizer
 }
 
 # Define data directory
