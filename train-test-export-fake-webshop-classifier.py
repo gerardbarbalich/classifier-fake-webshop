@@ -2,6 +2,8 @@
 This script produces a classsifier of fake webshops. 
 To do this, it injests processed data, trains and tests a classifer, and outputs the pickled classifier. 
 
+The classifier is a Pipeline() containing a TfidfVectorizer() and a RandomForestClassifier()
+
 In more detail - it imports data from WebScan, combines it, and performs analysis to identify fake webshops. The expected
 inputs include data files in pickle format and a CSV file containing confirmed fake webshops. It generates
 a model pipeline using RandomForestClassifier to classify webshops as 'Yes' (fake) or 'No' (not fake) based
